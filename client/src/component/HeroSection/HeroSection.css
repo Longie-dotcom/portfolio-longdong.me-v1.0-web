@@ -1,0 +1,188 @@
+/* Hero texts */
+#HeroSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10vh;
+    height: 90vh;
+}
+
+#HeroSection #StickyNote {
+    top: 8%;
+    left: 70%;
+}
+
+#HeroSection>.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#HeroSection>.hero>.hero-title,
+#HeroSection>.hero>.hero-subtitle {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: bounceIn 0.6s ease-out forwards;
+}
+
+#HeroSection>.hero>.hero-title {
+    animation-delay: 0.1s;
+    font-size: 90px;
+    margin-bottom: 0;
+}
+
+#HeroSection>.hero>.hero-title>span {
+    position: relative;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    z-index: 1;
+
+    -webkit-text-stroke: 1px white;
+    transition: transform 0.2s ease;
+}
+
+#HeroSection>.hero>.hero-title>span::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    z-index: -1;
+    white-space: nowrap;
+    pointer-events: none;
+
+    -webkit-text-stroke: 7px black;
+}
+
+#HeroSection>.hero>.hero-title>span:hover {
+    transform: translateY(10px);
+}
+
+#HeroSection>.hero>.hero-subtitle {
+    animation-delay: 0.3s;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+
+/* Animated sides */
+#HeroSection>.animated-rectangles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#HeroSection>.animated-rectangles>.corner-rectangles {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+#HeroSection>.animated-rectangles>.corner-rectangles>.bar {
+    width: 40px;
+    height: 0%;
+    background-color: red;
+    animation: stroke-down 2s ease forwards;
+    transform-origin: top;
+    opacity: 1;
+}
+
+#HeroSection>.animated-rectangles>.corner-rectangles>.bar1 {
+    background-color: #F489A3;
+    animation-delay: 0.1s;
+    border-left: 2.4px solid rgb(0, 0, 0);
+}
+
+#HeroSection>.animated-rectangles>.corner-rectangles>.bar2 {
+    background-color: #F0BB0D;
+    animation-delay: 0.3s;
+    border-left: 2.4px solid rgb(0, 0, 0);
+}
+
+#HeroSection>.animated-rectangles>.corner-rectangles>.bar3 {
+    background-color: #F3A20F;
+    animation-delay: 0.5s;
+    border-left: 2.4px solid rgb(0, 0, 0);
+}
+
+#HeroSection>.animated-rectangles>.corner-rectangles>.bar4 {
+    background-color: #F97028;
+    animation-delay: 0.7s;
+    border-left: 2.4px solid rgb(0, 0, 0);
+    border-right: 2.4px solid rgb(0, 0, 0);
+}
+
+@keyframes stroke-down {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #HeroSection {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 6vh;
+    }
+
+    #HeroSection #StickyNote {
+        top: 7%;
+        left: 20vw;
+        transform: rotate(0deg);
+    }
+
+
+    #HeroSection>.hero {
+        padding: 3rem 1.5rem;
+    }
+
+    #HeroSection>.hero>.hero-title {
+        font-size: 12vw;
+        text-align: center;
+    }
+
+    #HeroSection>.hero>.hero-subtitle {
+        font-size: 4.2vw;
+        text-align: center;
+    }
+
+    #HeroSection>.animated-rectangles {
+        display: none;
+        /* Hide animated bars on small screens */
+    }
+}

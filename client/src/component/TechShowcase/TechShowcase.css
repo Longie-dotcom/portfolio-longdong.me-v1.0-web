@@ -1,0 +1,238 @@
+.desc {
+    background-color: rgb(127, 255, 212);
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desc .detail {
+    width: 90%;
+    text-align: justify;
+    background-color: white;
+    padding: 5%;
+    border: 2.4px solid rgb(0, 0, 0);
+    box-shadow: 10px 10px 0 #000;
+    font-weight: 550;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: row-reverse;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.desc .detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 0 #000;
+}
+
+.desc .detail div .title {
+    font-size: 2vw;
+    font-weight: 650;
+    margin-bottom: 1vh;
+}
+
+.desc .detail .my-image {
+    margin-left: 5vw;
+}
+
+.desc .detail .my-image img {
+    width: 12vw;
+    transform: rotate(12deg);
+    height: fit-content;
+}
+
+.show-case {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    position: relative;
+    width: 20%;
+    padding: 2.5%;
+    background-color: rgb(127, 255, 212);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.row:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.row:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.row:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.row:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.tech-section-title {
+    font-size: 1.2vw;
+    font-weight: 550;
+    color: #333;
+    position: relative;
+    margin-bottom: 5vh;
+}
+
+.row h3 {
+    background-color: rgb(231, 215, 250);
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    border: 2.4px solid rgb(0, 0, 0);
+    box-shadow: 10px 10px 0 #000;
+}
+
+.tech-icon-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    animation: fadeInUp 0.8s ease;
+}
+
+.tech-icon {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    padding: 2%;
+    border: 2.4px solid rgb(0, 0, 0);
+    box-shadow: 10px 10px 0 #000;
+    object-fit: contain;
+    filter: grayscale(40%);
+    opacity: 0;
+}
+
+.tech-icon:hover {
+    transform: scale(1.15) rotate(-2deg) !important;
+    filter: grayscale(0%) drop-shadow(0 0 5px rgba(0, 122, 204, 0.4));
+}
+
+#TechShowcase .row .animate {
+    animation: bounceInTech 0.5s ease forwards;
+    opacity: 1;
+}
+
+@keyframes bounceInTech {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Optional fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .tech-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tech-section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desc {
+        flex-direction: column;
+        padding: 15%;
+        width: 70%;
+    }
+
+    .desc .detail {
+        flex-direction: column;
+        width: 100%;
+        font-size: 1rem;
+        padding: 6vw;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .desc .detail div .title {
+        font-size: 1.5rem;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    .desc .detail .my-image {
+        margin-left: 0;
+        margin-top: 2vh;
+        margin-bottom: 4vh;
+    }
+
+    .desc .detail .my-image img {
+        width: 30vw;
+        transform: rotate(8deg);
+    }
+
+    .show-case {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        width: 80%;
+        padding: 10%;
+    }
+
+    .row h3 {
+        font-size: 1.1rem;
+        width: 100%;
+        margin: 0 auto 2vh;
+    }
+
+    .tech-section-title {
+        font-size: 1.4rem;
+    }
+
+    .tech-icon-row {
+        gap: 1.2rem;
+    }
+
+    .tech-icon {
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,92 @@
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#Navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+    width: 94vw;
+    padding-top: 2vh;
+    position: fixed;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 2vh;
+    animation: slideDown 0.5s ease-out forwards;
+    opacity: 0;
+    border-bottom: 2.4px solid rgb(0, 0, 0);
+    z-index: 9999;
+    background-color: #eeefdc;
+}
+
+#Navbar>div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Navbar>.navigate>button {
+    width: 30%;
+    margin-left: 3%;
+}
+
+#Navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Navbar>.name {
+    width: auto;
+    padding: 1%;
+    background-color: rgb(212, 218, 255);
+    font-weight: 550;
+    border: 2.4px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px 0px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#Navbar>.name>img {
+    height: auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #Navbar {
+        flex-direction: row;
+        height: auto;
+        padding: 0;
+        width: 100vw;
+    }
+
+    #Navbar>div {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #Navbar>.name {
+        display: none;
+    }
+
+    #Navbar>.navigate {
+        flex-wrap: wrap;
+        width: 50%;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    #Navbar>.navigate>button {
+        width: 46%;
+        font-size: 3.5vw;
+        margin: 2%;
+    }
+}

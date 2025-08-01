@@ -1,0 +1,172 @@
+.project-page {
+    padding: 5vh 10vw;
+    padding-top: 10vh;
+}
+
+.project-title {
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5vh;
+    background-color: orange;
+    padding: 1vh;
+    border: 2.4px solid black;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0 #000;
+    color: white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3vh 3vw;
+}
+
+.project-card {
+    background: white;
+    border: 2.4px solid black;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 6px 6px 0 #000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(6px);
+    box-shadow: 0px 0px 0 #000;
+}
+
+.project-card:hover .card-overlay-img {
+    transform: rotate(5deg);
+    opacity: 1;
+}
+
+.project-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.card-overlay-img {
+    position: absolute;
+    bottom: -18px;
+    right: -28px;
+    width: 7vw;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+
+.deployed-link {
+    padding: 2%;
+}
+
+.tech-stack {
+    margin-bottom: 1rem;
+}
+
+.tech-pill {
+    background: #eee;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    margin-right: 6px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-buttons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-buttons button {
+    flex: 1;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.project-buttons button:hover {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .project-page {
+        padding: 5vh 5vw;
+        padding-top: 8vh;
+    }
+
+    .project-title {
+        font-size: 6vw;
+        padding: 2vh;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 5vh;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-card p {
+        font-size: 0.95rem;
+    }
+
+    .tech-pill {
+        font-size: 0.8rem;
+        padding: 3px 6px;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+        gap: 0.6rem;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .project-buttons button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .card-overlay-img {
+        width: 18vw;
+        bottom: -12px;
+        right: -12px;
+        opacity: 1;
+        transform: rotate(3deg);
+    }
+}
