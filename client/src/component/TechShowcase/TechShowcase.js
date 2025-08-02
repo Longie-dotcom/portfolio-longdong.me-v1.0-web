@@ -18,6 +18,8 @@ import WPF from '../../assets/pictures/WPF.png';
 import ASP from '../../assets/pictures/ASP.png';
 import RestAPI from '../../assets/pictures/RestAPI.png';
 import Nginx from '../../assets/pictures/Nginx.png';
+import Unity from '../../assets/pictures/unity.png';
+import Aseprite from '../../assets/pictures/aseprite.jpg';
 import Cat from '../../assets/pictures/cat.png';
 
 function TechShowcase() {
@@ -94,6 +96,8 @@ function TechShowcase() {
                         <img src={DrawIO} alt="Draw.IO" className="tech-icon" />
                         <img src={RaspberryPi} alt="Raspberry Pi" className="tech-icon" />
                         <img src={Nginx} alt="Nginx" className="tech-icon" />
+                        <img src={Aseprite} alt="Aseprite" className="tech-icon" />
+                        <img src={Unity} alt="Unity" className="tech-icon" />
                     </div>
                 </div>
             </div>
