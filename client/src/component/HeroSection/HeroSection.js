@@ -22,11 +22,11 @@ function HeroSection() {
             </div>
 
             <section className="hero">
-                <h1 className="hero-title special-font">
-                    <span data-text={TEXT.hero_title_1}>{TEXT.hero_title_1}</span>&nbsp;
-                    <span data-text={TEXT.hero_title_2}>{TEXT.hero_title_2}</span>&nbsp;
-                    <span data-text={TEXT.hero_title_3}>{TEXT.hero_title_3}</span>&nbsp;
-                    <span data-text={TEXT.hero_title_4}>{TEXT.hero_title_4}</span>
+                <h1 className="hero-title">
+                    <span>{TEXT.hero_title_1}</span>&nbsp;
+                    <span>{TEXT.hero_title_2}</span>&nbsp;
+                    <span>{TEXT.hero_title_3}</span>&nbsp;
+                    <span>{TEXT.hero_title_4}</span>
                 </h1>
                 <p className="hero-subtitle">{TEXT.hero_subtitle}</p>
                 <StickyNote

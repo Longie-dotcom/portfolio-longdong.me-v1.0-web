@@ -39,22 +39,7 @@
     color: black;
     font-weight: bold;
     z-index: 1;
-
-    -webkit-text-stroke: 1px white;
     transition: transform 0.2s ease;
-}
-
-#HeroSection>.hero>.hero-title>span::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: black;
-    z-index: -1;
-    white-space: nowrap;
-    pointer-events: none;
-
-    -webkit-text-stroke: 7px black;
 }
 
 #HeroSection>.hero>.hero-title>span:hover {
